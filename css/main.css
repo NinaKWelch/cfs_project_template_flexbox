@@ -1,0 +1,79 @@
+/* styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #555;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+/* HEADER */
+.topbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #ccc;
+    padding: 0 15px;
+    border-bottom: 1px solid gray;
+}
+
+.topbar a {
+    text-decoration: none;
+}
+
+.toolbar {
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between; 
+
+}
+
+.toolbar section.align-start,
+.toolbar section.align-end {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar h1 {
+    margin-left: 15px;
+    font-size: 1.2em
+}
+
+.toolbar button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.toolbar input {
+    border: none;
+    height: 32px;
+    padding-left: 5px;
+}
+
+#toggle-menu {
+    display: none;
+} 
+
+.main-navigation ul {
+    margin: 0;
+    padding-bottom: 20px;
+    list-style: none;
+}
+
+.main-navigation ul li {
+    padding: 20px 10px;
+}
+
+
