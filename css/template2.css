@@ -24,14 +24,14 @@
 	background: rgba(0, 0, 0, 0.9);
 }
 
-.navbar2 .nav-link,
-.navbar2 .nav-link-active {
-	padding: 0.75em 0;
-}
-
 .topbar2 .brand-link h1 {
 	font-size: 1.25em;
 	font-weight: normal;
+}
+
+.navbar2 .nav-link,
+.navbar2 .nav-link-active {
+	padding: 0.75em 0;
 }
 
 .menu2.btn-icon-outline:hover,
@@ -181,6 +181,12 @@
 	position: absolute;
 	bottom: 4px; /* important offset for outline */
 	right: 4px; /* important offset for outline */
+	
+}
+
+.card2-footer:focus {
+	/* remove default focus background on mobile screens */
+	outline: none; 
 }
 
 .like2 {
