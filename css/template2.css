@@ -1,0 +1,256 @@
+/**
+* TEMPLATE 2 STYLES
+*/
+
+/* MOBILE SCREENS */
+
+/* Header */
+.header2 {
+	position: relative; /* important for positioning of the topbar */
+}
+
+.topbar2 {
+	position: fixed; /* fix the position of the topbar... */ 
+	top: 0; /* ...at the top of the browser window... */ 
+	z-index: 1000; /* ...and on top of any other content */
+	width: 100%;
+	padding: 0.25em 1em;
+	transition: background .5s; /* smooth background color change */
+}
+
+.topbar2.scrolled {
+	/* when topbar has the class of scrolled, change background color */
+	/* adding the class is controlled by javascript - see template2.js */
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.navbar2 .nav-link,
+.navbar2 .nav-link-active {
+	padding: 0.75em 0;
+}
+
+.topbar2 .brand-link h1 {
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+.menu2.btn-icon-outline:hover,
+.menu2.btn-icon-outline:active,
+.navbar2 .nav-link {
+	color: #fff;
+}
+
+.menu2.btn-icon-outline:hover,
+.menu2.btn-icon-outline:active {
+	border: 1px solid #ccc;
+}
+
+.topbar2 .brand-link,
+.navbar2 .nav-link-active,
+.navbar2 .nav-link:hover,
+.navbar2 .nav-link:active {
+	color: #fff;
+}
+
+.navbar2 {
+  width: 100%; /* important for dropdown menu */
+}
+
+.navbar2:not(.show) {
+	/* when navbar doesn't have the class of show, hide the links */
+	/* adding the class is controlled by javascript - see template2.js */
+	display: none;
+}
+
+.navbar2.show {
+	/* when navbar has the class of show, show the links */
+	display: block;
+}
+
+.navbar2 ul {
+	list-style: none;
+	flex-direction: column; /* important for dropdown menu */
+}
+
+/* Hero */
+.hero2 {
+	position: relative; /* important for positioning of the hero-container */
+	background-color: black;
+	height: 100vh; /* 100% of the viewport height */
+	min-height: 25rem; /* fallback for vh units - equal to 400px in most browsers (16px x 25) */
+	width: 100%;
+	overflow: hidden;
+}
+
+.hero2-overlay {
+	/* adds a dark scrim over the video */
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1; /* important for layering the scrim on top of the video */
+}
+
+.hero2 video {
+	/* allow video to adjust to the screen */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0; /* important for layering the video under the scrim and text */
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+  
+.hero2-container {
+	position: relative;
+	z-index: 2; /* important for layering the text on top of the scrim and video */
+	width: 100%;
+	height: 100%;
+}
+
+.hero2-container-inner {
+	height: 100%;
+}
+
+.hero2-container-text h2 {
+	margin-bottom: 0.15em;
+	font-size: 4.25em;
+	font-weight: normal;
+}
+
+.hero2-container-text p {
+	margin-bottom: 1.25em;
+	font-size: 1.25em;
+}
+
+/* Shop */
+.shop2 {
+	margin-bottom: 3em;
+}
+
+.shop2 h3 {
+	padding: 1.75em 0;
+	font-size: 1.75em;
+	font-weight: normal;
+}
+
+.card2 {
+	position: relative; /* important for positioning of the like button */
+	width: 100%;
+	margin-bottom: 2em;
+	border: 1px solid #ccc;
+}
+
+.card2-link {
+	color: #333;
+	text-decoration: none;
+}
+
+.card2-link:hover,
+.card2-link:active {
+	color: #666;
+}
+
+.card2-image {
+	width: 100%;
+}
+
+.card2-body {
+	padding: 1em 1em 3em;
+}
+
+.card2-title {
+	margin-bottom: 0.5em;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.card2-text {
+	line-height: 1.5em;
+}
+
+.card2-footer {
+	position: absolute;
+	bottom: 4px; /* important offset for outline */
+	right: 4px; /* important offset for outline */
+}
+
+.like2 {
+	border: none;
+	padding: 0.5em 0.75em;
+	font-size: 1.5em;
+}
+
+.like2-active {
+	color: #e83e8c;
+}
+
+.like2:focus {
+    outline: 1px solid #fff; /* Removes button default outline */
+}
+
+/* SMALL TABLET SCREENS */
+
+@media only screen and (min-width: 576px) {
+	/* Shop */
+	.card2 {
+		width: calc((100% - 2em) / 2); /* two cards side by side */
+		margin-right: 2em;
+	}
+	.card2:nth-of-type(2n) {
+		margin-right: 0; /* remove right margin form every other card */
+	}
+}
+
+/* LARGE TABLET SCREENS */
+
+@media only screen and (min-width: 768px) {
+	/* Header */
+	.toolbar2 .menu2 {
+		display: none; /* hide the menu toggle button */
+	}
+
+	.navbar2 {
+		width: auto;
+	}
+
+	.navbar2:not(.show),
+	.navbar2.show {
+		display: block; /* show navbar links always on the top right */
+	}
+
+	.navbar2 ul.flex-container {
+		flex-direction: row; /* important for aligning navbar links */
+		justify-content: flex-end;
+	}
+
+	.navbar2 .nav-link,
+	.navbar2 .nav-link-active {
+		margin-left: 0.5em;
+		padding: 0.75em;
+	}
+}
+
+/* LARGE SCREENS */
+
+@media only screen and (min-width: 992px) {
+	.card2 {
+		width: calc((100% - 4em) / 3);  /* three cards side by side */
+	}
+
+	.card2:nth-of-type(2n) {
+		margin-right: 2em; /* add right margin to every other card */
+	}
+	
+	.card2:nth-of-type(3n) {
+		margin-right: 0; /* remove right margin form every third card */
+	}
+}

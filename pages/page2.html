@@ -2,33 +2,254 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final Project Template</title>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" crossorigin>
-  <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Template 2</title>
+
+    <!-- Normalize.css -->
+    <link
+        rel="stylesheet"
+        href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+        crossorigin="anonymous"
+    >
+    <!-- Google Fonts -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        crossorigin="anonymous"
+    >
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        crossorigin="anonymous"
+    >
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/template2.css">
 </head>
 
 <body>
-  <header>
-    <!-- Nav -->
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header class="header2">
+        <!-- Topbar -->
+        <div class="topbar2 flex-container-wrap flex-justify-between flex-align-center">
+            <!-- Brand -->
+            <a href="./page2.html" class="brand-link"><h1>Name</h1></a>
 
-  <!-- Main -->
-  <main>
-    <!-- main content -->
-  </main>
+            <!-- Toolbar -->
+            <section class="toolbar2 flex-container flex-justify-end">
+                <!-- Toggle Navigation button -->
+                <button
+                    class="menu2 btn btn-lg btn-icon-outline fas fa-bars" 
+                    onclick="toggleMenu2()"
+                    aria-label="Toggle navigation"
+                ></button>
+            </section><!-- end of Toolbar -->
+            
+            <!-- Toggle Navigation -->
+            <nav id="toggleNavigation2" class="navbar2">
+                <ul class="flex-container">
+                    <li>
+                        <a href="../index.html" class="nav-link">Template 1</a>
+                    </li>
 
-  <!-- Footer -->
-  <footer>
-    <!-- footer content -->
-  </footer>
+                    <li>
+                        <a href="./page2.html" class="nav-link-active">
+                            Template 2 <span class="visuallyhidden">(current)</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./page3.html" class="nav-link">Template 3</a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- end of Topbar -->
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Hero -->
+        <section class="hero2">
+            <!-- Dark scrim over background video -->
+            <div class="hero2-overlay"></div>
+
+            <!-- Background video -->
+            <video playsinline autoplay muted loop>
+                <source src="https://res.cloudinary.com/ninaw/video/upload/v1589137158/coverr-girl-in-the-shopping-mall_rx9f37.mp4" type="video/mp4">
+            </video>
+
+            <!-- Hero message -->
+            <div class="hero2-container">
+                <div class="hero2-container-inner flex-container flex-justify-center flex-align-center">
+                    <div class="hero2-container-text text-center">
+                        <h2 class="text-white">Heading Title</h2>
+
+                        <p class="text-white">Donec euismod sit amet ipsum at tristique.</p>
+
+                        <!-- Call To Action button -->
+                        <button onclick="callToAction()" class="btn btn-lg btn-default">
+                            Click Me!
+                        </button>
+                    </div>
+                </div>
+            </div><!-- end of Hero message -->
+        </section><!-- end of Hero -->
+
+        <!-- Shop -->
+        <section class="shop2 container-lg">
+            <h3 class="text-dark">Shop</h3>
+
+            <!-- Cards -->
+            <div class="flex-container-wrap">
+                <!-- Card -->
+                <div class="card2">
+                    <!-- Clickable card -->
+                    <a href="#" class="card2-link">
+                        <img class="card2-image" src="http://placehold.it/400x400" alt="Placeholder image">
+                        
+                        <!-- Card text -->
+                        <div class="card2-body">
+                            <h4 class="card2-title">Item One</h4>
+
+                            <p class="card2-text">
+                                Duis condimentum cursus pellentesque. Aenean aliquet ligula sem, 
+                                a congue mi scelerisque id. 
+                            </p> 
+                        </div><!-- end of Card text -->
+                    </a><!-- end of Clickable card -->
+
+                    <!-- Like button -->
+                    <div class="card2-footer">
+                        <button class="like2 fas fa-heart" aria-label="Toggle like"></button>
+                    </div><!-- end of Like button -->
+                </div><!-- end of Card -->
+
+                <!-- Card -->
+                <div class="card2">
+                    <!-- Clickable card -->
+                    <a href="#" class="card2-link">
+                        <img class="card2-image" src="http://placehold.it/400x400" alt="Placeholder image">
+                        
+                        <!-- Card text -->
+                        <div class="card2-body">
+                            <h4 class="card2-title">Item Two</h4>
+
+                            <p class="card2-text">
+                                Nam auctor sollicitudin augue, eu malesuada erat gravida sed. 
+                            </p> 
+                        </div><!-- end of Card text -->
+                    </a><!-- end of Clickable card -->
+
+                    <!-- Like button -->
+                    <div class="card2-footer">
+                        <button class="like2 fas fa-heart" aria-label="Toggle like"></button>
+                    </div><!-- end of Like button -->
+                </div><!-- end of Card -->
+
+                <!-- Card -->
+                <div class="card2">
+                    <!-- Clickable card -->
+                    <a href="#" class="card2-link">
+                        <img class="card2-image" src="http://placehold.it/400x400" alt="Placeholder image">
+                        
+                        <!-- Card text -->
+                        <div class="card2-body">
+                            <h4 class="card2-title">Item Three</h4>
+
+                            <p class="card2-text">
+                                Integer id mauris sit amet neque egestas congue eget at ipsum. 
+                                Nullam ullamcorper elit eu lacus imperdiet.
+                            </p> 
+                        </div><!-- end of Card text -->
+                    </a><!-- end of Clickable card -->
+
+                    <!-- Like button -->
+                    <div class="card2-footer">
+                        <button class="like2 fas fa-heart" aria-label="Toggle like"></button>
+                    </div><!-- end of Like button -->
+                </div><!-- end of Card -->
+
+                    <!-- Card -->
+                    <div class="card2">
+                        <!-- Clickable card -->
+                        <a href="#" class="card2-link">
+                            <img class="card2-image" src="http://placehold.it/400x400" alt="Placeholder image">
+                            
+                            <!-- Card text -->
+                            <div class="card2-body">
+                                <h4 class="card2-title">Item Four</h4>
+    
+                                <p class="card2-text">
+                                    Vestibulum porttitor sagittis neque vel gravida.  
+                                </p> 
+                            </div><!-- end of Card text -->
+                        </a><!-- end of Clickable card -->
+    
+                        <!-- Like button -->
+                        <div class="card2-footer">
+                            <button class="like2 fas fa-heart" aria-label="Toggle like"></button>
+                        </div><!-- end of Like button -->
+                    </div><!-- end of Card -->
+
+                <!-- Card -->
+                <div class="card2">
+                    <!-- Clickable card -->
+                    <a href="#" class="card2-link">
+                        <img class="card2-image" src="http://placehold.it/400x400" alt="Placeholder image">
+                        
+                        <!-- Card text -->
+                        <div class="card2-body">
+                            <h4 class="card2-title">Item Five</h4>
+
+                            <p class="card2-text">
+                                Nunc dapibus mi mattis nibh malesuada, 
+                                vitae dapibus turpis placerat.
+                            </p> 
+                        </div><!-- end of Card text -->
+                    </a><!-- end of Clickable card -->
+
+                    <!-- Like button -->
+                    <div class="card2-footer">
+                        <button class="like2 fas fa-heart" aria-label="Toggle like"></button>
+                    </div><!-- end of Like button -->
+                </div><!-- end of Card -->
+
+                <!-- Card -->
+                <div class="card2">
+                    <!-- Clickable card -->
+                    <a href="#" class="card2-link">
+                        <img class="card2-image" src="http://placehold.it/400x400" alt="Placeholder image">
+                        
+                        <!-- Card text -->
+                        <div class="card2-body">
+                            <h4 class="card2-title">Item Six</h4>
+
+                            <p class="card2-text">
+                                Nulla accumsan vitae lectus vitae condimentum. 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            </p> 
+                        </div><!-- end of Card text -->
+                    </a><!-- end of Clickable card -->
+
+                    <!-- Like button -->
+                    <div class="card2-footer">
+                        <button class="like2 fas fa-heart" aria-label="Toggle like"></button>
+                    </div><!-- end of Like button -->
+                </div><!-- end of Card -->
+            </div><!-- end of Cards -->
+        </section><!-- end of Shop -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-center">
+        <a href="./styleguide.html" class="a-link">Styleguide</a>
+    </footer>
+
+    <!-- Javacript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/template2.js"></script>
 </body>
 
 </html>

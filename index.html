@@ -2,61 +2,243 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final Project Template</title>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin>
-  <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Template 1</title>
+
+    <!-- Normalize.css -->
+    <link
+        rel="stylesheet"
+        href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+        crossorigin="anonymous"
+    >
+    <!-- Google Fonts -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        crossorigin="anonymous"
+    >
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        crossorigin="anonymous"
+    >
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/template1.css">
 </head>
 
 <body>
-  <div>
-    <header class="topbar">
-      <div class="toolbar">
-        <section class="align-start">
-          <button id="toggle-button" onclick="toggleMenu()" aria-label="Menu">
-            <i class="fas fa-bars"></i>
-          </button>
-          <a href="./index.html"><h1>Project Name</h1></a>
-        </section>
+    <!-- Container -->
+    <div class="container1 flex-container">
+        <!-- Toggle Navigation -->
+        <nav id="toggleNavigation1" class="navbar1 flex-container bg-dark">
+            <ul class="">
+                <li>
+                    <a class="nav-link-active" href="./index.html">
+                        Template 1 <span class="visuallyhidden">(current)</span>
+                    </a>
+                </li>
 
-        <section class="align-end">
-          <form action="">
-            <input type="text" placeholder="Search..." name="search">
-            <button type="submit"><i class="fas fa-search"></i></button>
-          </form>
-        </section>
-      </div>
+                <li>
+                    <a class="nav-link" href="./pages/page2.html">Template 2</a>
+                </li>
 
-      
+                <li>
+                    <a class="nav-link" href="./pages/page3.html">Template 3</a>
+                </li>
+            </ul>
+        </nav>
 
-      <!-- Nav -->
-      <nav id="toggle-menu" class="main-navigation">
-        <ul>
-          <li><a href="./pages/page2.html">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
-          <li><a href="#">Page 4</a>
-        </ul>
-      </nav>
-    </header>
-  
-    <!-- Main -->
-    <main class="container">	
-      <p>Page content goes here.</p>	
-      <!-- main content -->
-    </main>
-  
-    <!-- Footer -->
-    <footer>
-      <h4>Page Footer</h4>
-      <!-- footer content -->
-    </footer>
-  </div>
-  
+        <!-- Content -->
+        <div class="content1 flex-container">
+            <!-- Header -->
+            <header class="header1 flex-container flex-justify-between flex-align-center bg-light">
+                <!-- Toggle Navigation button -->
+                <button
+                    class="btn btn-lg btn-icon-outline fas fa-bars" 
+                    onclick="toggleMenu1()"
+                    aria-label="Toggle navigation"
+                >
+                </button>
 
-  <script type="text/javascript" src="./js/main.js"></script>
+                <!-- Brand --> 
+                <a href="./index.html" class="brand-link"><h1>Name</h1></a>
+
+                <!-- Search button -->
+                <button
+                    class="search1 btn btn-lg btn-icon-outline fas fa-search"
+                    onclick="search()"
+                    aria-label="Search"
+                >
+                </button>
+            </header>
+
+            <!-- Main -->
+            <main>	
+                <!-- Hero -->
+                <section class="hero1 flex-container flex-justify-center flex-align-center">
+                    <!-- Hero message -->
+                    <div class="hero1-container text-center">
+                        <h2 class="text-dark">Hero Title</h2>
+
+                        <p class="text-dark">
+                            Pellentesque sed dictum risus. Nam mollis placerat rutrum. 
+                            Etiam scelerisque metus nisl, et lobortis tortor consequat id.
+                        </p>
+
+                        <!-- Call To Action button -->
+                        <button onclick="callToAction()" class="btn btn-lg btn-default">Click Me!</button>
+                    </div><!-- end of Hero message -->
+                </section><!-- end of Hero -->
+    
+                <div class="container-lg">
+                    <!-- Sign In form and Feature video -->
+                    <section class="flex-container flex-justify-around flex-align-center">
+                        <!-- Sign In form -->
+                        <aside class="signin1">
+                            <form onsubmit="submitForm()" class="flex-container flex-justify-center">
+                                <h3 class="text-center text-dark">Welcome back!</h3>
+
+                                <div>
+                                    <input type="email" id="inputEmail" placeholder="Email address" required>
+                                    <label for="inputEmail" class="visuallyhidden">Email address</label>
+                                </div>
+                  
+                                <div>
+                                    <input type="password" id="inputPassword" placeholder="Password" required>
+                                    <label for="inputPassword" class="visuallyhidden">Password</label>
+                                </div>
+                  
+                                <label><input type="checkbox"> Remember password</label>
+                  
+                                <button type="submit" class="btn btn-lg btn-default">Sign in</button>
+            
+                                <a onclick="requestPassword()" class="text-center a-link">Forgot password?</a>
+                            </form>
+                        </aside><!-- end of Sign In form -->
+
+                        <!-- Feature video -->
+                        <figure class="feature1">
+                            <iframe
+                                title="Whale Shark - BBC Planet Earth"
+                                src="https://www.youtube.com/embed/_B8qiqeDrI0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            >
+                            </iframe>
+
+                            <!-- Feature video caption -->
+                            <figcaption class="text-center text-dark">Whale Shark documentary form BBC</figcaption>
+                        </figure><!-- end of Feature video -->
+                    </section><!-- end of Sign In form and Feature video -->
+
+                    <!-- Blogs -->
+                    <section>
+                        <!-- Blog List -->
+                        <ul class="bloglist1 flex-container-wrap text-dark">
+                            <h3 class="text-dark">Newest Blogs!</h3>
+
+                            <!-- Blog List item -->
+                            <li class="flex-container">
+                                <img src="http://placehold.it/75x75" alt="Placeholder image">
+
+                                <div class="bloglist1-text">
+                                    <h5>Blog 1</h5>
+
+                                    <p>
+                                        Aenean luctus molestie urna, a congue augue finibus in. 
+                                        Duis venenatis vulputate quam, egestas fringilla nisl egestas sed.
+                                    </p>               
+                                </div>
+                            </li><!-- end of Blog List item -->
+
+                            <!-- Blog List item -->
+                            <li class="flex-container">
+                                <img src="http://placehold.it/75x75" alt="Placeholder image">
+
+                                <div class="bloglist1-text">
+                                    <h5>Blog 2</h5>
+
+                                    <p>
+                                        Nullam sit amet elit sed augue mollis gravida ac sed tortor. 
+                                        Suspendisse faucibus et dolor eget interdum.
+                                    </p>
+                                </div>
+                            </li><!-- end of Blog List item -->
+
+                            <!-- Blog List item -->
+                            <li class="flex-container">
+                                <img src="http://placehold.it/75x75" alt="Placeholder image">
+                                
+                                <div class="bloglist1-text">
+                                    <h5>Blog 3</h5>
+
+                                    <p>
+                                        Vestibulum ipsum arcu, volutpat vitae nisi vel, 
+                                        volutpat lobortis sem. Vivamus quis justo sit amet nulla lacinia posuere. 
+                                    </p>     
+                                </div>
+                            </li><!-- end of Blog List item -->
+
+                            <!-- Blog List item -->
+                            <li class="flex-container">
+                                <img src="http://placehold.it/75x75" alt="Placeholder image">
+
+                                <div class="bloglist1-text">
+                                    <h5>Blog 4</h5>
+
+                                    <p>
+                                        Aenean luctus molestie urna, a congue augue finibus in. 
+                                        Duis venenatis vulputate quam, egestas fringilla nisl egestas sed. 
+                                    </p>     
+                                </div>
+                            </li><!-- end of Blog List item -->
+
+                            <!-- Blog List item -->
+                            <li class="flex-container">
+                                <img src="http://placehold.it/75x75" alt="Placeholder image">
+
+                                <div class="bloglist1-text">
+                                    <h5>Blog 5</h5>
+
+                                    <p>
+                                        Nullam sit amet elit sed augue mollis gravida ac sed tortor. 
+                                        Suspendisse faucibus et dolor eget interdum. 
+                                    </p>    
+                                </div>
+                            </li><!-- end of Blog List item -->
+
+                            <!-- Blog List item -->
+                            <li class="flex-container">
+                                <img src="http://placehold.it/75x75" alt="Placeholder image">
+
+                                <div class="bloglist1-text">
+                                    <h5>Blog 6</h5>
+
+                                    <p>
+                                        Vestibulum ipsum arcu, volutpat vitae nisi vel, 
+                                        volutpat lobortis sem. Vivamus quis justo sit amet nulla lacinia posuere.
+                                    </p> 
+                                </div>
+                            </li><!-- end of Blog List item -->
+                        </ul><!-- end of Blog List -->
+                    </section><!-- end of Blogs -->
+                </div><!-- end of Container -->
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer bg-light text-center">
+                <a href="./pages/styleguide.html" class="a-link">Styleguide</a>
+            </footer>
+        </div><!-- end of Content -->
+    </div><!-- end of Container -->
+
+    <!-- Javacript -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/template1.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Template 3</title>
+
+    <!-- Normalize.css -->
+    <link
+        rel="stylesheet"
+        href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+        crossorigin="anonymous"
+    >
+    <!-- Google Fonts -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        crossorigin="anonymous"
+    >
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        crossorigin="anonymous"
+    >
+    <!-- Flickity Carousel https://flickity.metafizzy.co/ -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+        media="screen"
+        crossorigin="anonymous"
+    >       
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/template3.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header3">
+        <!-- Flex container -->
+        <div class="container-lg flex-container flex-justify-between flex-align-center">
+            <!-- Flex item -->
+            <div class="flex-item">
+                <a href="#" class="a-link">Subscribe</a>
+            </div><!-- end of Flex item -->
+
+            <!-- Flex item -->
+            <div class="flex-item text-center">
+                <!-- Brand -->
+                <a href="./page3.html" class="brand-link"><h1>Name</h1></a>
+            </div><!-- end of Flex item -->
+            
+            <!-- Flex item -->
+            <div class="flex-item flex-container flex-justify-end">
+                <!-- Search button -->
+                <button
+                    onclick="search()"
+                    class="search3 btn btn-lg btn-icon fas fa-search"
+                    aria-label="Search"
+                >
+                </button>
+
+                <!-- Sign Up button -->
+                <a href="#" class="btn btn-outline">Sign Up</a>
+            </div><!-- end of Flex item -->
+        </div><!-- end of Flex container -->
+    </header>
+
+    <!-- Sliding Navigation -->
+    <nav class="navbar3 container-lg">
+        <ul class="flex-container flex-justify-between flex-align-center">
+            <li><a href="../index.html" class="nav-link">Template 1</a></li>
+
+            <li><a href="../index.html" class="nav-link">Template 1</a></li>
+
+            <li><a href="../index.html" class="nav-link">Template 1</a></li>
+
+            <li><a href="./page2.html" class="nav-link">Template 2</a></li>
+
+            <li><a href="./page2.html" class="nav-link">Template 2</a></li>
+
+            <li><a href="./page2.html" class="nav-link">Template 2</a></li>
+
+            <li>
+                <a href="./page3.html" class="nav-link-active">
+                    Template 3 <span class="visuallyhidden">(current)</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="./page3.html" class="nav-link-active">
+                    Template 3 <span class="visuallyhidden">(current)</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="./page3.html" class="nav-link-active">
+                    Template 3 <span class="visuallyhidden">(current)</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <!-- Carousel -->
+        <section class="carousel3 container-lg">
+            <div class="main-carousel">
+                <!-- Carousel item -->
+                <div class="carousel-cell">
+                    <img src="http://placehold.it/1200x600/D81B60/FFFFFF" class="img-responsive" alt="Placeholder image" />
+                </div><!-- end of Carousel item -->
+                
+                <!-- Carousel item -->
+                <div class="carousel-cell">
+                    <img src="http://placehold.it/1200x600/00897B/FFFFFF" class="img-responsive" alt="Placeholder image" />
+                </div><!-- end of Carousel item -->
+
+                <!-- Carousel item -->
+                <div class="carousel-cell">
+                    <img src="http://placehold.it/1200x600/333333/FFFFFF" class="img-responsive" alt="Placeholder image" />
+                </div><!-- end of Carousel item -->
+
+                <!-- Carousel item -->
+                <div class="carousel-cell">
+                    <img src="http://placehold.it/1200x600/CCCCCC/333333" class="img-responsive" alt="Placeholder image" />
+                </div><!-- end of Carousel item -->
+            </div><!-- end of Carousel -->
+        </section>
+        
+        <!-- Gallery -->
+        <section class="gallery3 container-lg flex-container-wrap">
+            <h3 class="text-dark">Gallery</h3>
+
+            <div class="flex-container-wrap">
+                <figure>
+                    <img src="http://placehold.it/400x300" class="img-responsive" alt="Placeholder image">
+                    <figcaption class="text-center">Caption 1</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="http://placehold.it/400x300" class="img-responsive" alt="Placeholder image">
+                    <figcaption class="text-center">Caption 2</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="http://placehold.it/400x300" class="img-responsive" alt="Placeholder image">
+                    <figcaption class="text-center">Caption 3</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="http://placehold.it/400x300" class="img-responsive" alt="Placeholder image">
+                    <figcaption class="text-center">Caption 4</figcaption>
+                </figure>
+            </div>
+        </section><!-- end of Gallery -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-center">
+        <a href="./styleguide.html" class="a-link">Styleguide</a>
+    </footer>
+
+    <!-- jQuery (required for the carousel to work) -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+    >
+    </script>
+
+    <!-- Flickity Carousel -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Javacript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/template3.js"></script>
+</body>
+
+</html>

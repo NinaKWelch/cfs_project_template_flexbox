@@ -1,0 +1,234 @@
+/**
+* TEMPLATE 1 STYLES
+*/
+
+/* MOBILE SCREENS */
+
+/* General */
+.container1 {
+    align-items: stretch; /* important for navbar display */
+}
+
+.content1 {
+    flex-direction: column;
+    min-width: 100%; /* important for navbar display */
+    overflow-x: hidden; /* important for navbar display */
+}
+
+/* Navigation */
+.navbar1 {
+    min-width: 70%;
+    padding: 3em 0 0 1em;
+}
+
+.navbar1:not(.show) {
+	/* when navbar doesn't have the class of show, hide the navbar */
+	/* adding the class is controlled by javascript - see template1.js */
+    display: none;
+}
+
+.navbar1.show {
+	/* when navbar has the class of show, show the navbar */
+	display: block;
+}
+
+.navbar1 ul {
+    list-style: none;
+}
+
+.navbar1 ul li {
+    margin-bottom: 0.25em;
+}
+
+.navbar1 .nav-link,
+.navbar1 .nav-link-active {
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+.navbar1 .nav-link {
+    color: #999;
+}
+
+.navbar1 .nav-link-active,
+.navbar1 .nav-link:hover,
+.navbar1 .nav-link:active {
+    color: #fff;
+}
+
+/* Header */
+.header1 {
+    padding: 0.25em 1em;
+}
+
+.header1 .brand-link h1 {
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #333;
+}
+
+/* Hero */
+.hero1 {
+    margin-bottom: 2em;
+    background-color: #999;
+    padding: 5em 0;
+}
+
+.hero1-container {
+    width: 80%;
+}
+
+.hero1-container h2 {
+    margin-bottom: 0.25em;
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.hero1-container p {
+    margin-bottom: 1.25em;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+/* Main Content */
+.signin1 {
+    /* Hide Sign In form on mobile screens */
+    display: none;
+}
+
+.signin1,
+.feature1 {
+    flex: none; /* important for fixed width of form and iframe */
+    margin-bottom: 3em;
+}
+
+.signin1 h3,
+.bloglist1 h3 {
+    margin-bottom: 1em;
+    font-size: 1.75em;
+    font-weight: normal;
+}
+
+/*  Sign In Form */
+.signin1 form {
+    flex-direction: column;
+    width: 240px;
+}
+
+.signin1 input {
+    margin-bottom: 1em;
+}
+
+.signin1 input[type="email"],
+.signin1 input[type="password"] {
+    /* applies to input elements with a tyoe of email and password */
+    width: 100%;
+    padding: 0.5em;
+}
+
+.signin1 input[type="checkbox"] {
+    /* applies to input elements with a tyoe of checkbox */
+    margin-right: 0.5em;
+}
+
+.signin1 button {
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.signin1 a {
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* Feature Video */
+.feature1 iframe {
+    width: 320px; /* youtube iframe ratio is 16:9... */
+    height: 180px; /* ...always maintain the same ratio */
+}
+
+/* Blog List */
+.bloglist1 {
+    margin-bottom: 3em;
+}
+
+.bloglist1 h3 {
+    width: 100%;
+}
+
+.bloglist1 li {
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.bloglist1-text {
+    margin-left: 1em;
+}
+
+.bloglist1-text h5 {
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+.bloglist1-text p {
+    line-height: 1.5em;
+}
+
+/* EXTRA SMALL TABLET SCREENS */
+
+@media only screen and (min-width: 500px) {
+    /* Feature Video */
+    .feature1 iframe {
+        width: 480px; 
+        height: 270px; 
+    }
+}
+
+/* SMALL TABLET SCREENS */
+
+@media only screen and (min-width: 576px) {
+    /* Navigation */
+    .navbar1 {
+        min-width: 35%;
+    } 
+}
+
+/* LARGE TABLET SCREENS */
+
+@media only screen and (min-width: 768px) {
+    /* Navigation */
+    .navbar1 {
+        min-width: 25%;
+    } 
+
+    /*  Sign In Form */
+    .signin1 {
+        /* Show Sign In form on tablet and larger screens */
+        display: block;
+    }
+
+    /* Blog List */
+    .bloglist1 li {
+        width: calc((100% - 2em) / 2); /* two list items side by side */
+    }
+    
+    .bloglist1 li:nth-of-type(odd) {
+        /* add right margin to every odd numbered list items */
+        margin-right: 2em;
+    }
+}
+
+/* LARGE SCREENS */
+
+@media only screen and (min-width: 992px) {
+    .content1 {
+        width: 100%; /* important for adjusting main content */
+        min-width: 0; /* important for adjusting main content */
+    }
+
+    /* Blog List */
+    .bloglist1 {
+        padding: 0 1em;
+    }
+}

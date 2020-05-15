@@ -1,79 +1,189 @@
-/* styles */
+/**
+* GLOBAL STYLES
+*/
+
+/* Resets */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* standard reset for better control of responsive layout */
+    margin: 0; /* removes default margin on every element */
+    padding: 0; /* removes default padding on every element*/
+    /* outline: 1px solid red; use as a design aide */
 }
 
-/* GLOBAL */
-body {
-    font: 16px Arial, Helvetica, sans-serif;
-    color: #555;
+button {
+    border: none; /* removes default border */
+    background: none; /* removes default background */
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
 }
 
-.container {
-    padding-top: 50px;
-}
-
-/* HEADER */
-.topbar {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    background: #ccc;
-    padding: 0 15px;
-    border-bottom: 1px solid gray;
-}
-
-.topbar a {
+a[class^="btn"],
+a[class^="nav-link"] {
+    /* applies to link elements that have a class starting with "btn" or "nav-link" */
+    display: block; /* important for padding */
     text-decoration: none;
 }
 
-.toolbar {
-    min-height: 50px;
-    display: flex;
-    justify-content: space-between; 
-
+/* Defaults */
+body {
+    font: 16px 'Roboto', Arial, Helvetica, sans-serif;
+    color: #666;
 }
 
-.toolbar section.align-start,
-.toolbar section.align-end {
+.container {
+    margin-top: 60px;
+}
+
+.container-lg {
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding: 3.5em 0;
+}
+
+/* Flexbox */
+.flex-container {
     display: flex;
+}
+
+.flex-container-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-justify-around {
+    justify-content: space-around;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.flex-align-center {
     align-items: center;
 }
 
-.toolbar h1 {
-    margin-left: 15px;
-    font-size: 1.2em
+/* Background */
+.bg-light {
+    background-color: #ccc;
 }
 
-.toolbar button {
-    width: 32px;
-    height: 32px;
-    border: none;
-    cursor: pointer;
-    
+.bg-dark {
+    background-color: #333;
 }
 
-.toolbar input {
-    border: none;
-    height: 32px;
-    padding-left: 5px;
+/* Text */
+.text-white {
+    color: #fff;
 }
 
-#toggle-menu {
-    display: none;
-} 
-
-.main-navigation ul {
-    margin: 0;
-    padding-bottom: 20px;
-    list-style: none;
+.text-dark {
+    color: #333;
 }
 
-.main-navigation ul li {
-    padding: 20px 10px;
+.text-center {
+    text-align: center;
 }
 
+/* Links */
+.brand-link,
+.a-link  {
+    text-decoration: none;
+}
 
+.a-link {
+    color: #666;
+}
+
+.a-link:hover,
+.a-link:active {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5em 0.75em;
+    color: #666;
+}
+
+.btn-sm {
+    font-size: 0.75em;
+}
+
+.btn-lg {
+    font-size: 1.25em;
+}
+
+.btn-default {
+    background-color: #666;
+    color: #fff;
+}
+
+.btn-default:hover,
+.btn-default:active {
+    background-color: #333;
+}
+
+.btn-outline,
+.btn-icon-outline {
+    border: 1px solid #666;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+    background-color: #666;
+    color: #fff;
+}
+
+.btn-icon-outline:hover,
+.btn-icon-outline:active {
+    border: 1px solid #333;
+}
+
+.btn-icon:hover,
+.btn-icon:active,
+.btn-icon-outline:hover,
+.btn-icon-outline:active {
+    color: #333;
+}
+
+/* Images */
+.img-responsive {
+    width: 100%;
+}
+
+/* Accessibility */
+.visuallyhidden {
+    /* Hide text form view but not from screen readers */
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* LARGE SCREENS */
+@media only screen and (max-width: 992px) {
+    /* Defaults */
+    .container-lg {
+        margin: 0 1em;
+    }
+}
