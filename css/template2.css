@@ -181,12 +181,6 @@
 	position: absolute;
 	bottom: 4px; /* important offset for outline */
 	right: 4px; /* important offset for outline */
-	
-}
-
-.card2-footer:focus {
-	/* remove default focus background on mobile screens */
-	outline: none; 
 }
 
 .like2 {
@@ -248,6 +242,7 @@
 /* LARGE SCREENS */
 
 @media only screen and (min-width: 992px) {
+	/* Shop */
 	.card2 {
 		width: calc((100% - 4em) / 3);  /* three cards side by side */
 	}

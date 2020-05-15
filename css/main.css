@@ -29,7 +29,7 @@ a[class^="nav-link"] {
     text-decoration: none;
 }
 
-/* Defaults */
+/* Global */
 body {
     font: 16px 'Roboto', Arial, Helvetica, sans-serif;
     color: #666;
@@ -182,7 +182,7 @@ body {
 
 /* LARGE SCREENS */
 @media only screen and (max-width: 992px) {
-    /* Defaults */
+    /* Global */
     .container-lg {
         margin: 0 1em;
     }
