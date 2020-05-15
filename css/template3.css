@@ -29,7 +29,7 @@
     width: calc(100% / 3);
 }
 
-.header3 .btn-link,
+.header3 .a-link,
 .header3 .btn-outline {
     /* hide elements on mobile screens */
     display: none;
@@ -109,8 +109,8 @@
 
 @media only screen and (min-width: 576px) {
     /* Header */
-    .header3 .btn-outline {
-        display: block; /* show elements hidden on smaller screens */
+    .header3 .a-link {
+        display: initial; /* show elements hidden on smaller screens */
     }
 
     .search3 {
@@ -131,10 +131,12 @@
 /* LARGE TABLET SCREENS */
 
 @media only screen and (min-width: 768px) {
-    .header3 .a-link {
-        display: initial; /* show elements hidden on smaller screens */
+    /* Header */
+    .header3 .btn-outline {
+        display: block; /* show elements hidden on smaller screens */
     }
 
+    /* Gallery */
     .gallery3 figure {
         width: calc((100% - 3em) / 4); /* four images side by side */
     }

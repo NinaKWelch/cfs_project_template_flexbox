@@ -203,7 +203,7 @@
         min-width: 25%;
     } 
 
-    /*  Sign In Form */
+    /* Sign In Form */
     .signin1 {
         /* Show Sign In form on tablet and larger screens */
         display: block;
@@ -223,6 +223,7 @@
 /* LARGE SCREENS */
 
 @media only screen and (min-width: 992px) {
+    /* General */
     .content1 {
         width: 100%; /* important for adjusting main content */
         min-width: 0; /* important for adjusting main content */
