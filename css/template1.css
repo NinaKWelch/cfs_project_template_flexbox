@@ -103,7 +103,7 @@
 }
 
 .signin1 h3,
-.bloglist1 h3 {
+.bloglist1-title {
     margin-bottom: 1em;
     font-size: 1.75em;
     font-weight: normal;
@@ -145,15 +145,16 @@
 .feature1 iframe {
     width: 320px; /* youtube iframe ratio is 16:9... */
     height: 180px; /* ...always maintain the same ratio */
+    background-color: #000;
+}
+
+.feature1 figcaption {
+    padding: 1em 0;
 }
 
 /* Blog List */
 .bloglist1 {
     margin-bottom: 3em;
-}
-
-.bloglist1 h3 {
-    width: 100%;
 }
 
 .bloglist1 li {
@@ -228,7 +229,10 @@
     }
 
     /* Blog List */
+    .bloglist1-title {
+        padding-left: 16px; /* important for alignment */
+    }
     .bloglist1 {
-        padding: 0 1em;
+        padding: 0 16px;
     }
 }

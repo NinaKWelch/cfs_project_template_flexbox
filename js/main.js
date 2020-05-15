@@ -3,17 +3,17 @@
 */
 
 function search() {
-  prompt("What are you looking for?")
+    prompt("What are you looking for?")
 }
 
 function callToAction() {
-  alert("Thank you!")
+    alert("Thank you!")
 }
 
 function submitForm() {
-  alert("You are signed in!")
+    alert("You are signed in!")
 }
 
 function requestPassword() {
-  prompt("Tell us your email")
+    prompt("Tell us your email")
 }
