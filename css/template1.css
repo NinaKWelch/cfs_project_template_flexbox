@@ -157,7 +157,7 @@
 .feature1 iframe {
     width: 320px; /* youtube iframe ratio is 16:9... */
     height: 180px; /* ...always maintain the same ratio */
-    background-color: #000;
+    background: #000;
 }
 
 .feature1 figcaption {

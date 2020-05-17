@@ -57,7 +57,7 @@
 }
 
 .navbar2 {
-  width: 100%; /* important for dropdown menu */
+    width: 100%; /* important for dropdown menu */
 }
 
 .navbar2:not(.show) {
@@ -111,7 +111,6 @@
 	height: auto;
 	z-index: 0; /* important for layering the video under the scrim and text */
 	-webkit-transform: translateX(-50%) translateY(-50%);
-	   -moz-transform: translateX(-50%) translateY(-50%);
 	    -ms-transform: translateX(-50%) translateY(-50%);
 	        transform: translateX(-50%) translateY(-50%);
 }
