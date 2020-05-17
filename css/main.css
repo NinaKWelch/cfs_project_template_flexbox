@@ -2,11 +2,14 @@
 * GLOBAL STYLES
 */
 
+/* Browser prefixes by https://autoprefixer.github.io/ */
+
 /* Resets */
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* standard reset for better control of responsive layout */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* standard reset for better control of responsive layout */
     margin: 0; /* removes default margin on every element */
     padding: 0; /* removes default padding on every element*/
     /* outline: 1px solid red; use as a design aide */
@@ -15,10 +18,19 @@
 button {
     border: none; /* removes default border */
     background: none; /* removes default background */
-    transition: background 250ms ease-in-out, 
+    -webkit-transition: background 250ms ease-in-out, 
+                -webkit-transform 150ms ease;
+            transition: background 250ms ease-in-out, 
+                -webkit-transform 150ms ease;
+         -o-transition: background 250ms ease-in-out, 
                 transform 150ms ease;
+            transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+            transition: background 250ms ease-in-out, 
+                transform 150ms ease, 
+                -webkit-transform 150ms ease;
     -webkit-appearance: none;
-    -moz-appearance: none;
+       -moz-appearance: none;
     cursor: pointer;
 }
 
@@ -50,32 +62,46 @@ body {
 
 /* Flexbox */
 .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .flex-container-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .flex-justify-center {
-    justify-content: center;
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+     justify-content: center;
 }
 
 .flex-justify-between {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+     justify-content: space-between;
 }
 
 .flex-justify-around {
-    justify-content: space-around;
+       -ms-flex-pack: distribute;
+     justify-content: space-around;
 }
 
 .flex-justify-end {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+       -ms-flex-pack: end;
+     justify-content: flex-end;
 }
 
 .flex-align-center {
-    align-items: center;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Background */

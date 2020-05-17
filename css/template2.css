@@ -2,6 +2,8 @@
 * TEMPLATE 2 STYLES
 */
 
+/* Browser prefixes by https://autoprefixer.github.io/ */
+
 /* MOBILE SCREENS */
 
 /* Header */
@@ -15,7 +17,9 @@
 	z-index: 1000; /* ...and on top of any other content */
 	width: 100%;
 	padding: 0.25em 1em;
-	transition: background .5s; /* smooth background color change */
+	-webkit-transition: background .5s;
+	     -o-transition: background .5s;
+	        transition: background .5s; /* smooth background color change */
 }
 
 .topbar2.scrolled {
@@ -53,7 +57,7 @@
 }
 
 .navbar2 {
-  width: 100%; /* important for dropdown menu */
+    width: 100%; /* important for dropdown menu */
 }
 
 .navbar2:not(.show) {
@@ -69,7 +73,10 @@
 
 .navbar2 ul {
 	list-style: none;
-	flex-direction: column; /* important for dropdown menu */
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	   -ms-flex-direction: column;
+		   flex-direction: column; /* important for dropdown menu */
 }
 
 /* Hero */
@@ -89,7 +96,7 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.6);
 	z-index: 1; /* important for layering the scrim on top of the video */
 }
 
@@ -103,10 +110,9 @@
 	width: auto;
 	height: auto;
 	z-index: 0; /* important for layering the video under the scrim and text */
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+	    -ms-transform: translateX(-50%) translateY(-50%);
+	        transform: translateX(-50%) translateY(-50%);
 }
   
 .hero2-container {
@@ -194,7 +200,7 @@
 }
 
 .like2:focus {
-    outline: 1px solid #fff; /* Removes button default outline */
+    outline: 1px solid white; /* Removes button default outline */
 }
 
 /* SMALL TABLET SCREENS */
@@ -228,8 +234,13 @@
 	}
 
 	.navbar2 ul.flex-container {
-		flex-direction: row; /* important for aligning navbar links */
-		justify-content: flex-end;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		   -ms-flex-direction: row;
+			   flex-direction: row; /* important for aligning navbar links */
+		-webkit-box-pack: end;
+		   -ms-flex-pack: end;
+		 justify-content: flex-end;
 	}
 
 	.navbar2 .nav-link,

@@ -2,6 +2,8 @@
 * TEMPLATE 3 STYLES
 */
 
+/* Browser prefixes by https://autoprefixer.github.io/ */
+
 /* MOBILE SCREENS */
 
 /* Header */
@@ -59,7 +61,9 @@
 }
 
 .navbar3 ul li {
-    flex: none;
+    -webkit-box-flex: 0;
+            -ms-flex: none;
+                flex: none;
     margin-right: 0.5em;
 }
 
