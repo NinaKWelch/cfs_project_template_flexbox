@@ -1,4 +1,4 @@
-# Code First: Girls Front End Final Project Starter Templates
+# Code First: Girls Front-end Project Starter Templates
 
 3 Project templates created with flexbox
 
