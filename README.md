@@ -1,4 +1,6 @@
-# Code First: Girls Front-end Project Starter Templates
+# Gode First: Girls Front-end Curriculum
+
+## Project Starter Templates
 
 3 Project templates created with flexbox
 
